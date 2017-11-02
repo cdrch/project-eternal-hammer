@@ -1,0 +1,36 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Project Eternal Hammer</title>
+<body>
+<!-- Import the Ga game engine files -->
+<script src="ga.js"></script>
+<script src="plugins.js"></script>
+<script>
+
+// Immediate function to isolate the game code from global space
+(function () {
+var g = ga(
+    512, 512, setup
+);
+
+//Start the Ga engine.
+g.start();
+
+var dungeon, player, treasure, enemies, chimes, exit, healthBar, message, gameScene, gameOverScene;
+
+function setup() {
+    //Set the canvas border and background color
+    g.canvas.style.border = "1px black solid"; // or dashed
+    g.backgroundColor = "white";
+    
+    //set the game state to `play`
+    g.state = play;
+}
+
+function play() {
+    //This code loops from top to bottom 60 times per second  
+}
+
+}());
+</script>
+</body>
